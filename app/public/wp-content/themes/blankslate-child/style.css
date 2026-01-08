@@ -6,3 +6,107 @@ Author: MissCarreau
 Template: blankslate
 Version: 1.0
 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER*/
+.header-inner {
+  margin: 0 auto;
+  padding: 0px 0px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo img {
+  padding-top: 31;
+  padding-left: 37px;
+  height: 19px;
+  max-width: 201px;
+  width: auto;
+}
+
+/* Navigation */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu li a {
+  font-size: 16px;
+  font-weight:00;
+  color: #000;
+}
+
+/* Bouton "Commander" (dernier item du menu) */
+.nav-menu li:last-child a {
+  height: 80px;              
+  background: #d9a3a1;
+  color: #fff;
+  padding: 0 22px;           
+  border-radius: 2px;
+  display: flex;             
+  align-items: center;     
+  justify-content: center;   
+}
+
+
+.nav-menu li:last-child a:hover {
+  background: #C02E44;
+}
+
+/* FOOTER */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.site-footer a,
+.site-footer a:visited {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+.site-main {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
