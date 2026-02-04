@@ -110,3 +110,60 @@ a {
     gap: 16px;
   }
 }
+
+
+/* CSS FORMULAIRE */
+/* ===== Contact card ===== */
+.contact-card{
+  font-family: Syne, sans-serif;
+  border-radius: 14px;
+}
+
+/* Chaque ligne */
+.contact-card .form-row{
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.contact-card label{
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: #111;
+}
+
+/* Champs */
+.contact-card .field{
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 16px;
+  outline: none;
+}
+
+
+/* Bouton */
+.contact-card .form-actions{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contact-card .btn{
+  border: 0;
+  border-radius: 5px;
+  padding: 20px 50px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.contact-card .btn-primary{
+  background: #e0b9b4;
+  color: #fff;
+}
+
+.contact-card .btn-primary:hover{
+  background: #C02E44;
+}
