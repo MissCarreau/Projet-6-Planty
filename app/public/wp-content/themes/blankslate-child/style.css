@@ -25,7 +25,12 @@ a {
   text-decoration: none;
 }
 
-/* HEADER*/
+/* HEADER | (Menu de navigation) */
+.site-header{
+  position: relative;
+  z-index: 1000;
+}
+
 .header-inner {
   margin: 0 auto;
   padding: 0px 0px;
@@ -36,14 +41,12 @@ a {
 }
 
 .site-logo img {
-  padding-top: 31;
   padding-left: 37px;
   height: 19px;
   max-width: 201px;
   width: auto;
 }
 
-/* Navigation */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -59,18 +62,16 @@ a {
   color: #000;
 }
 
-/* Bouton "Commander" (dernier item du menu) */
 .nav-menu li:last-child a {
   height: 80px;              
   background: #d9a3a1;
   color: #fff;
-  padding: 0 22px;           
+  padding: 0 59px;           
   border-radius: 2px;
   display: flex;             
   align-items: center;     
   justify-content: center;   
 }
-
 
 .nav-menu li:last-child a:hover {
   background: #C02E44;
@@ -111,22 +112,24 @@ a {
   }
 }
 
-
-/* CSS FORMULAIRE */
-/* ===== Contact card ===== */
+/* Formulaire | Nous Contacter */
 .contact-card{
   font-family: Syne, sans-serif;
-  border-radius: 14px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Chaque ligne */
 .contact-card .form-row{
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 /* Labels */
 .contact-card label{
-  display: block;
   font-size: 20px;
   font-weight: 400;
   color: #111;
@@ -134,27 +137,36 @@ a {
 
 /* Champs */
 .contact-card .field{
-  width: 100%;
+  margin-top: 10px;
   box-sizing: border-box;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 10px;
-  padding: 14px 16px;
-  font-size: 16px;
+  border-radius: 7px;
+  min-height: 71px; 
+  font-size: 20px;
   outline: none;
+  padding: 0 16px; 
 }
-
 
 /* Bouton */
 .contact-card .form-actions{
   margin-top: 10px;
-  text-align: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.contact-card .wpcf7-spinner{
+  position: absolute; 
+  right: 0;             
+  margin: 0;
 }
 
 .contact-card .btn{
-  border: 0;
+  border: none;
   border-radius: 5px;
-  padding: 20px 50px;
+  width: 198px;
+  height: 55px;
   font-size: 15px;
   font-weight: 400;
 }

@@ -15,7 +15,7 @@
       <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/img/logo-planty.webp'); ?>" alt="Planty">
         </a>
-    </div>
+    </div>  
 
     <nav class="site-nav" aria-label="Menu principal">
       <?php

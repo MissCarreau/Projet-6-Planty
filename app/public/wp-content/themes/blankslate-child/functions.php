@@ -10,3 +10,15 @@ add_action('wp_enqueue_scripts', function () {
     register_nav_menus(['primary' => __('Menu principal', 'planty')]);
 
 });
+
+function planty_enqueue_scripts() {
+  wp_enqueue_script(
+    'planty-nav',
+    get_stylesheet_directory_uri() . '/assets/js/nav.js',
+    [],
+    null,
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'planty_enqueue_scripts');
+?>
