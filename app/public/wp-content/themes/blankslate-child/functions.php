@@ -21,4 +21,22 @@ function planty_enqueue_scripts() {
   );
 }
 add_action('wp_enqueue_scripts', 'planty_enqueue_scripts');
+
+
+add_filter('wp_nav_menu_items', 'planty_add_admin_link_to_menu', 10, 2);
+
+function planty_add_admin_link_to_menu($items, $args) {
+
+    if (!is_user_logged_in()) {
+        return $items;
+    }
+
+    $items .= '<li class="menu-item menu-item-admin">'
+           .  '<a href="' . esc_url(admin_url()) . '">Admin</a>'
+           .  '</li>';
+
+    return $items;
+}
+
+
 ?>

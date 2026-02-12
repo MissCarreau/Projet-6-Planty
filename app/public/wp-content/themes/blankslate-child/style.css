@@ -112,70 +112,250 @@ a {
   }
 }
 
-/* Formulaire | Nous Contacter */
-.contact-card{
-  font-family: Syne, sans-serif;
-  border-radius: 7px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+/* Formulaire Commander | */
+.wpcf7 .order-form{
+  padding: 32px 20px;
 }
 
-/* Chaque ligne */
-.contact-card .form-row{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.wpcf7 .order-form .section-title{
+  color:#fff;
+  font-weight: 700;
+  font-size: 30px;
 }
 
-/* Labels */
-.contact-card label{
-  font-size: 20px;
-  font-weight: 400;
-  color: #111;
+.wpcf7 .order-form .group-title{
+  color:#fff;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
-/* Champs */
-.contact-card .field{
-  margin-top: 10px;
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 7px;
-  min-height: 71px; 
-  font-size: 20px;
-  outline: none;
-  padding: 0 16px; 
+/* Produits */
+.wpcf7 .order-form .products-grid{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 21px;
+  margin-bottom: 28px;
 }
 
-/* Bouton */
-.contact-card .form-actions{
-  margin-top: 10px;
-  justify-content: center;
-  display: flex;
+.wpcf7 .order-form .product-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.wpcf7 .order-form .product-visual{
   position: relative;
 }
 
-.contact-card .wpcf7-spinner{
-  position: absolute; 
-  right: 0;             
+.wpcf7 .order-form .product-visual img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.wpcf7 .order-form .product-name{
+  position:absolute;
+  inset: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.wpcf7 .order-form .product-qty{
+  display: flex;
+  justify-content: center;
+}
+
+.wpcf7 .order-form .product-qty input{
+  text-align:center;
+  background:#fff;
+  border: 0;
+}
+
+/* Colonnes infos / livraison */
+.wpcf7 .order-form .contact-card{
+  margin-top: 50px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+}
+
+.wpcf7 .order-form .contact-card .form-column:first-child{
+  padding-right: 20px;
+}
+
+.wpcf7 .order-form .contact-card .form-column:last-child{
+  padding-left: 20px;
+}
+
+.wpcf7 .order-form .form-column label{
+  display:block;
+  color:#fff;
+  margin: 14px 0 18px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+
+.wpcf7 .order-form input[type="text"],
+.wpcf7 .order-form input[type="email"] {
+  margin-top: 20px;
+  width:100%;
+  height: 71px;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+/* Le number des quantités (petit) */
+.wpcf7 .order-form .product-qty input[type="number"]{
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: textfield;
+  width: 39px;
+  height: 56px;
+  padding: 0;
+}
+
+/* Enlever les flèches pour les cases de la quantité */
+.wpcf7 .order-form input[type="number"]::-webkit-outer-spin-button,
+.wpcf7 .order-form input[type="number"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
   margin: 0;
 }
 
-.contact-card .btn{
-  border: none;
-  border-radius: 5px;
-  width: 198px;
-  height: 55px;
-  font-size: 15px;
-  font-weight: 400;
+/* Bouton */
+.wpcf7 .order-form .submit-wrap{
+  margin-top: 26px;
+  display:flex;
+  justify-content:center;
 }
 
-.contact-card .btn-primary{
-  background: #e0b9b4;
+.wpcf7 .order-form .submit-wrap input[type="submit"]{
+  background: #d9b1ad;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 34px;
+  font-weight: 400;
+  font-size: 15px;
   color: #fff;
 }
 
-.contact-card .btn-primary:hover{
-  background: #C02E44;
+/* Ligne horizontale au-dessus */
+.wpcf7 .order-form::before{
+  content:"";
+  display:block;
+  width:100%;
+  height:1px;
+  background:#fff;
+  margin-bottom:30px;
+}
+
+/* Ligne sous les quantités */
+.wpcf7 .order-form .products-grid{
+  border-bottom:1px solid #fff;
+  padding-bottom:30px;
+}
+
+/* Barre verticale entre les colonnes */
+.wpcf7 .order-form .contact-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:1px;
+  background:#fff;
+}
+
+.wpcf7 .order-form .wpcf7-spinner{
+  position: absolute;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .wpcf7 .order-form .products-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wpcf7 .order-form .contact-card{ grid-template-columns: 1fr; }
+  .wpcf7 .order-form .contact-card::after{ display:none; }
+  .wpcf7 .order-form .contact-card .form-column:first-child{
+    padding-right: 0;
+  }
+  .wpcf7 .order-form .contact-card .form-column:last-child{
+    padding-left: 0;
+  }
+}
+
+/* FORMULAIRE | Contact */
+.wpcf7 .contact-form{
+  max-width: 520px;     
+  margin: 0 auto;       
+  padding: 5px 24px;
+}
+
+/* LABELS */
+.wpcf7 .contact-form label{
+  display:block;
+  color:#000;
+  font-size:14px;
+  font-weight:400;
+  margin: 0 0 14px;
+}
+
+/* Inputs + textarea */
+.wpcf7 .contact-form input[type="text"],
+.wpcf7 .contact-form input[type="email"],
+.wpcf7 .contact-form textarea{
+  width:100%;
+  border:0;
+  border-radius:7px;
+  padding: 14px 12px;
+  outline:none;
+  background:#fff;
+}
+
+.wpcf7 .contact-form input[type="text"],
+.wpcf7 .contact-form input[type="email"]{
+  height:56px;
+  margin-top:10px;
+}
+
+.wpcf7 .contact-form textarea{
+  height: 180px;          
+  margin-top:10px;
+}
+
+/* Bouton centré */
+.wpcf7 .contact-form .submit-wrap{
+  margin-top: 22px;
+  display:flex;
+  justify-content:center;
+}
+
+/* Style bouton */
+.wpcf7 .contact-form input[type="submit"]{
+  background:#d9b1ad;
+  border:0;
+  border-radius:5px;
+  padding: 12px 36px;
+  color:#fff;
+  font-size: 13px;
+  font-weight: 400;
+  cursor:pointer;
+}
+
+.wpcf7 .contact-form .wpcf7-spinner{
+  position: absolute;
+  margin: 0;
 }
