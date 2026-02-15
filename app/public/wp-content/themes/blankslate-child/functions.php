@@ -31,12 +31,15 @@ function planty_add_admin_link_to_menu($items, $args) {
         return $items;
     }
 
-    $items .= '<li class="menu-item menu-item-admin">'
-           .  '<a href="' . esc_url(admin_url()) . '">Admin</a>'
-           .  '</li>';
+    $admin_item = '<li class="menu-item menu-item-admin">'
+                . '<a href="' . esc_url(admin_url()) . '">Admin</a>'
+                . '</li>';
 
+    $pattern = '/(<li[^>]*>\s*<a[^>]*>\s*Nous\s*rencontrer\s*<\/a>\s*<\/li>)/i';
+
+    if (preg_match($pattern, $items)) {
+        $items = preg_replace($pattern, '$1' . $admin_item, $items, 1);
+    } 
     return $items;
 }
-
-
 ?>
