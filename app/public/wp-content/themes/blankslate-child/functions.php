@@ -14,7 +14,7 @@ add_action('wp_enqueue_scripts', function () {
 function planty_enqueue_scripts() {
   wp_enqueue_script(
     'planty-nav',
-    get_stylesheet_directory_uri() . '/assets/js/nav.js',
+    get_stylesheet_directory_uri() . '/script.js',
     [],
     null,
     true

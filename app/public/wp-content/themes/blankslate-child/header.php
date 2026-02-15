@@ -15,7 +15,9 @@
       <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/img/logo-planty.webp'); ?>" alt="Planty">
         </a>
-    </div>  
+    </div>    
+
+    <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">☰</button>
 
     <nav class="site-nav" aria-label="Menu principal">
       <?php
@@ -23,6 +25,7 @@
         'menu' => 'Menu Principal',
         'container' => false,
         'menu_class' => 'nav-menu',
+        'menu_id' => 'primary-menu',
         ]);
       ?>
     </nav>
