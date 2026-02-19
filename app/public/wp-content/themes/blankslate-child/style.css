@@ -47,7 +47,6 @@ a {
   width: auto;
 }
 
-/* Menu desktop */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -79,7 +78,7 @@ a {
   background: #C02E44;
 }
 
-/* Bouton burger (caché en desktop) */
+/* Bouton menu | (Tablette & Mobile) */
 .menu-toggle{
   display: none;
   background: transparent;
@@ -194,7 +193,8 @@ a {
 
 /* FOOTER */
 .footer-inner {
-  max-width: 1200px;
+  max-width: 1440px;
+  height: 60px;
   margin: 0 auto;
   padding: 24px;
   text-align: center;
@@ -295,7 +295,7 @@ a {
   border: 0;
 }
 
-/* Colonnes infos / livraison */
+/* Colonnes infos | livraison */
 .wpcf7 .order-form .contact-card{
   margin-top: 50px;
   display:grid;
@@ -333,7 +333,6 @@ a {
   outline: none;
 }
 
-/* Le number des quantités (petit) */
 .wpcf7 .order-form .product-qty input[type="number"]{
   -moz-appearance: textfield;
   -webkit-appearance: none;
@@ -350,7 +349,6 @@ a {
   margin: 0;
 }
 
-/* Bouton */
 .wpcf7 .order-form .submit-wrap{
   margin-top: 26px;
   display:flex;
@@ -414,12 +412,11 @@ a {
 
 /* FORMULAIRE | Contact */
 .wpcf7 .contact-form{
-  max-width: 520px;     
+  max-width: 520px;    
   margin: 0 auto;       
   padding: 5px 24px;
 }
 
-/* LABELS */
 .wpcf7 .contact-form label{
   display:block;
   color:#000;
@@ -428,7 +425,6 @@ a {
   margin: 0 0 14px;
 }
 
-/* Inputs + textarea */
 .wpcf7 .contact-form input[type="text"],
 .wpcf7 .contact-form input[type="email"],
 .wpcf7 .contact-form textarea{
@@ -451,14 +447,12 @@ a {
   margin-top:10px;
 }
 
-/* Bouton centré */
 .wpcf7 .contact-form .submit-wrap{
   margin-top: 22px;
   display:flex;
   justify-content:center;
 }
 
-/* Style bouton */
 .wpcf7 .contact-form input[type="submit"]{
   background:#d9b1ad;
   border:0;
