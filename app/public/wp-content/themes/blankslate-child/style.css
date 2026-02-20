@@ -17,7 +17,7 @@ a {
 }
 
 /* HEADER | (Menu de navigation) */
-.site-header{
+.site-header {
   position: relative;
   z-index: 1000;
 }
@@ -70,7 +70,7 @@ a {
 }
 
 /* Bouton menu | (Tablette & Mobile) */
-.menu-toggle{
+.menu-toggle {
   display: none;
   background: transparent;
   border: 0;
@@ -82,25 +82,24 @@ a {
   margin-right: 16px;
 }
 
-/* ============ RESPONSIVE ============ */
-@media (max-width: 991px) {
-
-  .header-inner{
+/* Responsive */
+@media (max-width: 1024px) {
+  .header-inner {
     height: 64px;
     padding: 0 16px;
   }
 
-  .site-logo img{
+  .site-logo img {
     padding-left: 0;
   }
 
-  .menu-toggle{
+  .menu-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
-  .site-nav{
+  .site-nav {
     position: absolute;
     left: 0;
     right: 0;
@@ -110,22 +109,22 @@ a {
     display: none; 
   }
 
-  .site-header.is-menu-open .site-nav{
+  .site-header.is-menu-open .site-nav {
     display: block;
   }
 
-  .nav-menu{
+  .nav-menu {
     flex-direction: column;
     gap: 12px;
     padding: 12px 16px;
     align-items: center;
   }
 
-  .nav-menu li a{
+  .nav-menu li a { 
     padding: 12px 8px;
   }
 
-  .nav-menu li:last-child a{
+  .nav-menu li:last-child a { 
     height: auto;
     padding: 14px 16px;
     border-radius: 8px;
@@ -134,38 +133,39 @@ a {
 
 @media (max-width: 768px){
 
-  .header-inner{
+  .header-inner {
     position: relative;
     display: flex ;
-    flex-direction: row !important;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center ;
     justify-content: flex-start ;
     height: 64px ;
     padding: 0 16px ;
+    gap: 16px;
   }
 
-  .site-branding{
+  .site-branding {
     width: auto;
     flex: 0 1 auto;
     max-width: calc(100% - 64px); 
     text-align: left;
   }
 
-  .site-logo{
+  .site-logo {
     display: inline-flex;
     width: auto;
     align-items: center;
   }
 
-  .site-logo img{
+  .site-logo img {
     padding-left: 0;
     display: block;
     max-width: 180px; 
     height: auto;
   }
 
-  .menu-toggle{
+  .menu-toggle {
     display: inline-flex ;
     position: absolute ;
     right: 16px ;
@@ -175,10 +175,261 @@ a {
     z-index: 3000;
   }
 
-  .site-nav{
+  .site-nav {
     top: 64px;
     z-index: 2000;
   }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+/* FORMULAIRE | Commander */
+.wpcf7 .order-form {
+  padding: 32px 20px;
+}
+
+.wpcf7 .order-form .section-title {
+  color:#fff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.wpcf7 .order-form .group-title {
+  color:#fff;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+/* Affichage Produits */
+.wpcf7 .order-form .products-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 21px;
+  margin-bottom: 28px;
+}
+
+.wpcf7 .order-form .product-card {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.wpcf7 .order-form .product-visual {
+  position: relative;
+}
+
+.wpcf7 .order-form .product-visual img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.wpcf7 .order-form .product-name {
+  position:absolute;
+  inset: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.wpcf7 .order-form .product-qty {
+  display: flex;
+  justify-content: center;
+}
+
+.wpcf7 .order-form .product-qty input {
+  text-align:center;
+  background:#fff;
+  border: 0;
+}
+
+/* Colonnes infos | livraison */
+.wpcf7 .order-form .contact-card {
+  margin-top: 50px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+}
+
+.wpcf7 .order-form .contact-card .form-column:first-child {
+  padding-right: 20px;
+}
+
+.wpcf7 .order-form .contact-card .form-column:last-child {
+  padding-left: 20px;
+}
+
+.wpcf7 .order-form .form-column label {
+  display:block;
+  color:#fff;
+  margin: 14px 0 18px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.wpcf7 .order-form input[type="text"],
+.wpcf7 .order-form input[type="email"] {
+  margin-top: 20px;
+  width:100%;
+  height: 71px;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.wpcf7 .order-form .product-qty input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: textfield;
+  width: 39px;
+  height: 56px;
+  padding: 0;
+}
+
+/* Enlever les flèches pour les cases de la quantité */
+.wpcf7 .order-form input[type="number"]::-webkit-outer-spin-button,
+.wpcf7 .order-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wpcf7 .order-form .submit-wrap {
+  margin-top: 26px;
+  display:flex;
+  justify-content:center;
+}
+
+.wpcf7 .order-form .submit-wrap input[type="submit"] {
+  background: #d9b1ad;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 34px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+}
+
+/* Ligne horizontale au-dessus */
+.wpcf7 .order-form::before {
+  content:"";
+  display:block;
+  width:100%;
+  height:1px;
+  background:#fff;
+  margin-bottom:30px;
+}
+
+/* Ligne sous les quantités */
+.wpcf7 .order-form .products-grid {
+  border-bottom:1px solid #fff;
+  padding-bottom:30px;
+}
+
+/* Barre verticale entre les colonnes */
+.wpcf7 .order-form .contact-card::after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:1px;
+  background:#fff;
+}
+
+.wpcf7 .order-form .wpcf7-spinner {
+  position: absolute;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .wpcf7 .order-form .products-grid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+  .wpcf7 .order-form .contact-card { 
+    grid-template-columns: 1fr; 
+  }
+  .wpcf7 .order-form .contact-card::after { 
+    display:none; 
+  }
+  .wpcf7 .order-form .contact-card .form-column:first-child {
+    padding-right: 0;
+  }
+  .wpcf7 .order-form .contact-card .form-column:last-child {
+    padding-left: 0;
+  }
+}
+
+/* FORMULAIRE | Contact */
+.wpcf7 .contact-form {
+  max-width: 520px;    
+  margin: 0 auto;       
+  padding: 5px 24px;
+}
+
+.wpcf7 .contact-form label {
+  display:block;
+  color:#000;
+  font-size:14px;
+  font-weight:400;
+  margin: 0 0 14px;
+}
+
+.wpcf7 .contact-form input[type="text"],
+.wpcf7 .contact-form input[type="email"],
+.wpcf7 .contact-form textarea {
+  width:100%;
+  border:0;
+  border-radius:7px;
+  padding: 14px 12px;
+  outline:none;
+  background:#fff;
+}
+
+.wpcf7 .contact-form input[type="text"],
+.wpcf7 .contact-form input[type="email"] { 
+  height:56px;
+  margin-top:10px;
+}
+
+.wpcf7 .contact-form textarea {
+  height: 180px;          
+  margin-top:10px;
+}
+
+.wpcf7 .contact-form .submit-wrap {
+  margin-top: 22px;
+  display:flex;
+  justify-content:center;
+}
+
+.wpcf7 .contact-form input[type="submit"] {
+  background:#d9b1ad;
+  border:0;
+  border-radius:5px;
+  padding: 12px 36px;
+  color:#fff;
+  font-size: 13px;
+  font-weight: 400;
+  cursor:pointer;
+}
+
+.wpcf7 .contact-form .wpcf7-spinner {
+  position: absolute;
+  margin: 0;
 }
 
 
@@ -199,263 +450,3 @@ a {
   font-weight: 400;
 }
 
-
-.site-main {
-  display: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-}
-
-
-/* Formulaire Commander | */
-.wpcf7 .order-form{
-  padding: 32px 20px;
-}
-
-.wpcf7 .order-form .section-title{
-  color:#fff;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.wpcf7 .order-form .group-title{
-  color:#fff;
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 40px;
-}
-
-/* Produits */
-.wpcf7 .order-form .products-grid{
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 21px;
-  margin-bottom: 28px;
-}
-
-.wpcf7 .order-form .product-card{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.wpcf7 .order-form .product-visual{
-  position: relative;
-}
-
-.wpcf7 .order-form .product-visual img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-}
-
-.wpcf7 .order-form .product-name{
-  position:absolute;
-  inset: 0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-  font-weight: 800;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.wpcf7 .order-form .product-qty{
-  display: flex;
-  justify-content: center;
-}
-
-.wpcf7 .order-form .product-qty input{
-  text-align:center;
-  background:#fff;
-  border: 0;
-}
-
-/* Colonnes infos | livraison */
-.wpcf7 .order-form .contact-card{
-  margin-top: 50px;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  position: relative;
-}
-
-.wpcf7 .order-form .contact-card .form-column:first-child{
-  padding-right: 20px;
-}
-
-.wpcf7 .order-form .contact-card .form-column:last-child{
-  padding-left: 20px;
-}
-
-.wpcf7 .order-form .form-column label{
-  display:block;
-  color:#fff;
-  margin: 14px 0 18px;
-  font-weight: 400;
-  font-size: 20px;
-}
-
-
-
-.wpcf7 .order-form input[type="text"],
-.wpcf7 .order-form input[type="email"] {
-  margin-top: 20px;
-  width:100%;
-  height: 71px;
-  border: 0;
-  border-radius: 7px;
-  padding: 10px 12px;
-  outline: none;
-}
-
-.wpcf7 .order-form .product-qty input[type="number"]{
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-  appearance: textfield;
-  width: 39px;
-  height: 56px;
-  padding: 0;
-}
-
-/* Enlever les flèches pour les cases de la quantité */
-.wpcf7 .order-form input[type="number"]::-webkit-outer-spin-button,
-.wpcf7 .order-form input[type="number"]::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.wpcf7 .order-form .submit-wrap{
-  margin-top: 26px;
-  display:flex;
-  justify-content:center;
-}
-
-.wpcf7 .order-form .submit-wrap input[type="submit"]{
-  background: #d9b1ad;
-  border: 0;
-  border-radius: 5px;
-  padding: 14px 34px;
-  font-weight: 400;
-  font-size: 15px;
-  color: #fff;
-}
-
-/* Ligne horizontale au-dessus */
-.wpcf7 .order-form::before{
-  content:"";
-  display:block;
-  width:100%;
-  height:1px;
-  background:#fff;
-  margin-bottom:30px;
-}
-
-/* Ligne sous les quantités */
-.wpcf7 .order-form .products-grid{
-  border-bottom:1px solid #fff;
-  padding-bottom:30px;
-}
-
-/* Barre verticale entre les colonnes */
-.wpcf7 .order-form .contact-card::after{
-  content:"";
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:50%;
-  width:1px;
-  background:#fff;
-}
-
-.wpcf7 .order-form .wpcf7-spinner{
-  position: absolute;
-  margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 900px){
-  .wpcf7 .order-form .products-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .wpcf7 .order-form .contact-card{ grid-template-columns: 1fr; }
-  .wpcf7 .order-form .contact-card::after{ display:none; }
-  .wpcf7 .order-form .contact-card .form-column:first-child{
-    padding-right: 0;
-  }
-  .wpcf7 .order-form .contact-card .form-column:last-child{
-    padding-left: 0;
-  }
-}
-
-/* FORMULAIRE | Contact */
-.wpcf7 .contact-form{
-  max-width: 520px;    
-  margin: 0 auto;       
-  padding: 5px 24px;
-}
-
-.wpcf7 .contact-form label{
-  display:block;
-  color:#000;
-  font-size:14px;
-  font-weight:400;
-  margin: 0 0 14px;
-}
-
-.wpcf7 .contact-form input[type="text"],
-.wpcf7 .contact-form input[type="email"],
-.wpcf7 .contact-form textarea{
-  width:100%;
-  border:0;
-  border-radius:7px;
-  padding: 14px 12px;
-  outline:none;
-  background:#fff;
-}
-
-.wpcf7 .contact-form input[type="text"],
-.wpcf7 .contact-form input[type="email"]{
-  height:56px;
-  margin-top:10px;
-}
-
-.wpcf7 .contact-form textarea{
-  height: 180px;          
-  margin-top:10px;
-}
-
-.wpcf7 .contact-form .submit-wrap{
-  margin-top: 22px;
-  display:flex;
-  justify-content:center;
-}
-
-.wpcf7 .contact-form input[type="submit"]{
-  background:#d9b1ad;
-  border:0;
-  border-radius:5px;
-  padding: 12px 36px;
-  color:#fff;
-  font-size: 13px;
-  font-weight: 400;
-  cursor:pointer;
-}
-
-.wpcf7 .contact-form .wpcf7-spinner{
-  position: absolute;
-  margin: 0;
-}
